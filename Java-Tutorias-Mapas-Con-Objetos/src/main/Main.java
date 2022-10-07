@@ -3,12 +3,15 @@ package main;
 import entidad.Pelicula;
 import java.util.HashMap;
 import java.util.Map;
+import servicio.ServicioPelicula;
 
 
 public class Main {
 
    
     public static void main(String[] args) {
+        //Creo el servico de peliculas
+        ServicioPelicula servicioPelicula= new ServicioPelicula();
         
         //Creo un mapa con clave de tipo String y valor un objeto
         HashMap<String,Pelicula> peliculas = new HashMap<>();
@@ -27,12 +30,16 @@ public class Main {
         peliculas.put("L12", new Pelicula("El juego del miedo", 2004, "Terror"));
         
         //Muestro el mapa de peliculas
-        for (Map.Entry<String, Pelicula> entry : peliculas.entrySet()) {
-            String key = entry.getKey();
-            Pelicula value = entry.getValue();
-            System.out.println("Clave: "+ key + " Valor: "+ value);
-        }
-        System.out.println("--------\n");
+        servicioPelicula.mostrarMapaPeliculas(peliculas);
+        
+        //Agrego una pelicula con la misma clave
+        peliculas.put("B45", new Pelicula("Hulk",2003, "Accion"));
+        servicioPelicula.mostrarMapaPeliculas(peliculas);
+        
+        //Eliminar pelicula con la clave
+        
+        //Ordenar
+        
     }
     
 }

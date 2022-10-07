@@ -11,27 +11,27 @@ public class Main {
     public static void main(String[] args) {
         //Creo el servicio de clientes
         ServicioCliente servicioCliente = new ServicioCliente();
-        //creo el conjunto de nombre "clientesBanco" del tipo cliente
+        //Creo el conjunto de nombre "clientesBanco" del tipo cliente
         HashSet<Cliente> clientesBanco = new HashSet<>();
-        //Muestro el conjunto de clientes
+        //Muestro el conjunto de clientes vacio
         servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         //Agrego elementos a la lista
         //1ra forma
-        Cliente c1 = new Cliente("Juan Lopez", 00001, 150000);
+        Cliente c1 = new Cliente("Juan Lopez", 10001, 150000);
         clientesBanco.add(c1);
         
         //2da Forma
-        clientesBanco.add(new Cliente("Pedro Gonzales", 00002, 200000));
-        clientesBanco.add(new Cliente("Maria Rodriguez", 00003, 50000));
-        clientesBanco.add(new Cliente("Karina Garcia", 00004, 250000));
-        clientesBanco.add(new Cliente("Luciano Gomez", 00005, 10000));
+        clientesBanco.add(new Cliente("Pedro Gonzales", 10002, 200000));
+        clientesBanco.add(new Cliente("Maria Rodriguez", 10003, 50000));
+        clientesBanco.add(new Cliente("Karina Garcia", 10004, 250000));
+        clientesBanco.add(new Cliente("Luciano Gomez", 10005, 10000));
         
        //Muestro la lista completa
         servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         //agrego el mismo cliente
-        clientesBanco.add(new Cliente("Karina Garcia", 00004, 250000));
+        clientesBanco.add(new Cliente("Karina Garcia", 10004, 250000));
         servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         

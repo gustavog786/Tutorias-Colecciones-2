@@ -97,5 +97,31 @@ public class Cliente {
         return true;
     }
     */
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.nCuenta;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        if (this.nCuenta != other.nCuenta) {
+            return false;
+        }
+        return true;
+    }
+    
     
 }
