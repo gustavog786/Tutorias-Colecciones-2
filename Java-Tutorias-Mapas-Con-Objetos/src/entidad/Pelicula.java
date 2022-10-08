@@ -44,13 +44,6 @@ public class Pelicula {
     }
     
     //to String
-    /*
-    @Override
-    public String toString() {
-        return nombre + "\t" + edad + "\t" + altura + "\t" + peso + "\t" + nacionalidad;
-    }
-    */
-
     @Override
     public String toString() {
         return  nombre + "\t" + anio + "\t" + genero ;

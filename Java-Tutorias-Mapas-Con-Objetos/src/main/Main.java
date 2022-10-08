@@ -1,6 +1,7 @@
 package main;
 
 import entidad.Pelicula;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import servicio.ServicioPelicula;
@@ -17,28 +18,43 @@ public class Main {
         HashMap<String,Pelicula> peliculas = new HashMap<>();
         
         //Agrego elementos a la lista
-        // 1 forma
-        Pelicula p1 = new Pelicula("Titanic", 1997, "Drama");
+        // 1ra forma
+        Pelicula p1 = new Pelicula("Titanic ", 1997, "Drama");
         peliculas.put("A51", p1);
         
         //2da forma
-        peliculas.put("B45", new Pelicula("El padrino", 1972, "Drama"));
-        peliculas.put("C78", new Pelicula("Matrix", 1999, "Ciencia Ficcion"));
-        peliculas.put("A28", new Pelicula("Parasitos", 2019, "Drama"));
-        peliculas.put("R66", new Pelicula("Rambo", 1982, "Accion"));
-        peliculas.put("J14", new Pelicula("Joker", 2019, "Suspenso"));
-        peliculas.put("L12", new Pelicula("El juego del miedo", 2004, "Terror"));
+        peliculas.put("C78", new Pelicula("Matrix  ", 1999, "Ciencia Ficcion"));
+        peliculas.put("B45", new Pelicula("Frosen  ", 2013, "Animacion"));
+        peliculas.put("A28", new Pelicula("Avatar  ", 2009, "Ciencia ficcion"));
+        peliculas.put("R66", new Pelicula("Rocky   ", 1976, "Drama"));
+        peliculas.put("J14", new Pelicula("Joker   ", 2019, "Suspenso"));
+        peliculas.put("L12", new Pelicula("Scream  ", 1996, "Terror"));
         
         //Muestro el mapa de peliculas
         servicioPelicula.mostrarMapaPeliculas(peliculas);
         
         //Agrego una pelicula con la misma clave
-        peliculas.put("B45", new Pelicula("Hulk",2003, "Accion"));
+        peliculas.put("C78", new Pelicula("Jumanji ",1995, "Accion"));
         servicioPelicula.mostrarMapaPeliculas(peliculas);
         
         //Eliminar pelicula con la clave
+        peliculas.remove("B45");
+        servicioPelicula.mostrarMapaPeliculas(peliculas);
         
+        //Iterator
+        //No podemos usar el iterator para eliminar elementos de un mapa
         //Ordenar
+        //Transfomo el mapa en un arraylist
+        ArrayList<Pelicula> listaPeliculas= new ArrayList(peliculas.values());
+        
+        System.out.println("Ondeno Alfabeticamente por nombre: ");
+        servicioPelicula.ordenarPorNombre(listaPeliculas);
+        
+        System.out.println("Ondeno por anio: ");
+        servicioPelicula.ordenarPorAnio(listaPeliculas);
+        
+        System.out.println("Ondeno Alfabeticamente por genero: ");
+        servicioPelicula.ordenarPorGenero(listaPeliculas);
         
     }
     
