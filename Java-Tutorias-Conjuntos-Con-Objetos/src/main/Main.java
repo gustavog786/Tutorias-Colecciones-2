@@ -43,11 +43,21 @@ public class Main {
         System.out.println("Ordeno por Nombre");
         servicioCliente.ordenarPorNombre(clientesBanco);
         
+        //ordeno TS
+        System.out.println("Ordenopor NOmbbre TS");
+        servicioCliente.ordenarPorNombreTS(clientesBanco);
+        
+        
         System.out.println("Ordeno por Numero de Cuenta");
         servicioCliente.ordenarPorNCuenta(clientesBanco);
         
+        System.out.println("Ordeno por NUmero de Cuenta TS");
+        servicioCliente.ordenarPorNCuentaTS(clientesBanco);
+        
         System.out.println("Ordeno por Saldo");
-        servicioCliente.ordenarPorSaldo(clientesBanco);   
+        servicioCliente.ordenarPorSaldo(clientesBanco); 
+        System.out.println("Ordeno por saldo TS");
+        servicioCliente.ordenarPorSaldoTS(clientesBanco);
     }
     
 }
