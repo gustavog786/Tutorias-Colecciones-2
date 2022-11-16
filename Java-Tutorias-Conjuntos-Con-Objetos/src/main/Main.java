@@ -2,7 +2,9 @@ package main;
 
 import entidad.Cliente;
 import java.util.HashSet;
+import java.util.TreeSet;
 import servicio.ServicioCliente;
+import utilidad.Comparators;
 
 
 public class Main {
@@ -14,7 +16,7 @@ public class Main {
         //Creo el conjunto de nombre "clientesBanco" del tipo cliente
         HashSet<Cliente> clientesBanco = new HashSet<>();
         //Muestro el conjunto de clientes vacio
-        servicioCliente.mostrarConjuntoClientes(clientesBanco);
+        //servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         //Agrego elementos a la lista
         //1ra forma
@@ -31,33 +33,28 @@ public class Main {
         servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         //agrego el mismo cliente
-        clientesBanco.add(new Cliente("Karina Garcia", 10004, 250000));
-        servicioCliente.mostrarConjuntoClientes(clientesBanco);
+//         clientesBanco.add(new Cliente("Karina Perez", 10004, 250000));
+//        servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         
-        //Elimino un objeto del conjunto mediante itarator
-        servicioCliente.eliminarCliente(clientesBanco);
-        servicioCliente.mostrarConjuntoClientes(clientesBanco);
-        
-        //ordenar Clientes
-        System.out.println("Ordeno por Nombre");
-        servicioCliente.ordenarPorNombre(clientesBanco);
-        
-        //ordeno TS
-        System.out.println("Ordenopor NOmbbre TS");
-        servicioCliente.ordenarPorNombreTS(clientesBanco);
+//        //Elimino un objeto del conjunto mediante itarator
+//        servicioCliente.eliminarCliente(clientesBanco);
+//        servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         
-        System.out.println("Ordeno por Numero de Cuenta");
-        servicioCliente.ordenarPorNCuenta(clientesBanco);
+        //Ordenar clientes
+        //Trasformo el Hashset en treeset
         
-        System.out.println("Ordeno por NUmero de Cuenta TS");
-        servicioCliente.ordenarPorNCuentaTS(clientesBanco);
-        
-        System.out.println("Ordeno por Saldo");
-        servicioCliente.ordenarPorSaldo(clientesBanco); 
-        System.out.println("Ordeno por saldo TS");
-        servicioCliente.ordenarPorSaldoTS(clientesBanco);
+//        TreeSet<Cliente> listaclienteTS = new TreeSet<>(Comparators.compareNombre);
+//        listaclienteTS.addAll(clientesBanco);       
+//        System.out.println("Lista ordenada");
+//        servicioCliente.mostrarConjuntoClientes(listaclienteTS);
+//
+//        
+//        listaclienteTS.add(new Cliente("Ana Lopez", 10007, 100));
+//        System.out.println("Lista ordenada");
+//        servicioCliente.mostrarConjuntoClientes(listaclienteTS);
+
     }
     
 }

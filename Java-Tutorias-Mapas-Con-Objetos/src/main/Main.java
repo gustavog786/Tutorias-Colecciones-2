@@ -3,7 +3,6 @@ package main;
 import entidad.Pelicula;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import servicio.ServicioPelicula;
 
 
@@ -14,8 +13,8 @@ public class Main {
         //Creo el servico de peliculas
         ServicioPelicula servicioPelicula= new ServicioPelicula();
         
-        //Creo un mapa con clave de tipo String y valor un objeto
-        HashMap<String,Pelicula> peliculas = new HashMap<>();
+        //Creo un mapa con clave de tipo String y valor un objeto 
+        HashMap<String,Pelicula> peliculas = new HashMap<>(); 
         
         //Agrego elementos a la lista
         // 1ra forma
@@ -31,31 +30,35 @@ public class Main {
         peliculas.put("L12", new Pelicula("Scream  ", 1996, "Terror"));
         
         //Muestro el mapa de peliculas
-        servicioPelicula.mostrarMapaPeliculas(peliculas);
+        servicioPelicula.mostrarPeliculas(peliculas);
         
         //Agrego una pelicula con la misma clave
         peliculas.put("C78", new Pelicula("Jumanji ",1995, "Accion"));
-        servicioPelicula.mostrarMapaPeliculas(peliculas);
+        servicioPelicula.mostrarPeliculas(peliculas);
         
         //Eliminar pelicula con la clave
-        peliculas.remove("B45");
-        servicioPelicula.mostrarMapaPeliculas(peliculas);
+//        peliculas.remove("B45");
+//        servicioPelicula.mostrarPeliculas(peliculas);
         
-        //Iterator
-        //No podemos usar el iterator para eliminar elementos de un mapa
+        //otra forma de eliminar
+        
+        
         //Ordenar
         //Transfomo el mapa en un arraylist
-        ArrayList<Pelicula> listaPeliculas= new ArrayList(peliculas.values());
+//        ArrayList<Pelicula> listaPeliculas= new ArrayList(peliculas.values());
+//        
+//        System.out.println("Ondeno Alfabeticamente por nombre: ");
+//        servicioPelicula.ordenarPorNombre(listaPeliculas);
+//        
+//        System.out.println("Ondeno por anio: ");
+//        servicioPelicula.ordenarPorAnio(listaPeliculas);
+//        
+//        System.out.println("Ondeno Alfabeticamente por genero: ");
+//        servicioPelicula.ordenarPorGenero(listaPeliculas);
         
-        System.out.println("Ondeno Alfabeticamente por nombre: ");
-        servicioPelicula.ordenarPorNombre(listaPeliculas);
         
-        System.out.println("Ondeno por anio: ");
-        servicioPelicula.ordenarPorAnio(listaPeliculas);
-        
-        System.out.println("Ondeno Alfabeticamente por genero: ");
-        servicioPelicula.ordenarPorGenero(listaPeliculas);
-        
+        //map.values().removeIf(value -> !value.contains("1"));
+
     }
     
 }

@@ -19,6 +19,14 @@ public class ServicioCliente {
         }
         System.out.println("-----------\n");
     }
+     public void mostrarConjuntoClientes( TreeSet<Cliente> listaTreeSet){
+        System.out.println("NOMBRE\t\tNCUENTA\tSALDO");
+        for (Cliente aux : listaTreeSet) {
+            System.out.println(aux);
+        }
+        System.out.println("-----------\n");
+    }
+     
     public void eliminarCliente(HashSet<Cliente> clientesBanco){
         System.out.println("Ingrese el nombre del clinte que quiere eliminar: ");
         String clienteEliminado= scan.next();

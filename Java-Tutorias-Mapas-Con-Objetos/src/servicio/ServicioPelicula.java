@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package servicio;
 
 import entidad.Pelicula;
@@ -14,7 +10,7 @@ import utlidad.Comparators;
 
 public class ServicioPelicula {
     
-    public void mostrarMapaPeliculas(HashMap<String,Pelicula> peliculas){
+    public void mostrarPeliculas(HashMap<String,Pelicula> peliculas){
         System.out.println("Clave\t\t   Nombre  \tAnio\tGenero");
         for (Map.Entry<String, Pelicula> entry : peliculas.entrySet()) {
             String key = entry.getKey();
@@ -24,7 +20,8 @@ public class ServicioPelicula {
         System.out.println("--------\n");
     }
     
-    public void mostrarListaPeliculas(ArrayList<Pelicula> listaPeliculas){
+    public void mostrarPeliculas(ArrayList<Pelicula> listaPeliculas){
+        System.out.println("Nombre\t\tAnio\tGenero");
         for (Pelicula aux : listaPeliculas) {
             System.out.println(aux);
         }
@@ -33,16 +30,16 @@ public class ServicioPelicula {
     
     public void ordenarPorNombre(ArrayList<Pelicula> listaPeliculas){
         listaPeliculas.sort(Comparators.compareNombre);
-        mostrarListaPeliculas(listaPeliculas);
+        mostrarPeliculas(listaPeliculas);
     }
     
     public void ordenarPorAnio(ArrayList<Pelicula> listaPeliculas){
         listaPeliculas.sort(Comparators.compareAnio);
-        mostrarListaPeliculas(listaPeliculas);
+        mostrarPeliculas(listaPeliculas);
     }
     
     public void ordenarPorGenero(ArrayList<Pelicula> listaPeliculas){
         listaPeliculas.sort(Comparators.compareGenero);
-        mostrarListaPeliculas(listaPeliculas);
+        mostrarPeliculas(listaPeliculas);
     }
 }

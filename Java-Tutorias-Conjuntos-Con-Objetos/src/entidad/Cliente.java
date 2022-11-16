@@ -56,6 +56,26 @@ public class Cliente {
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*sobreescribo el metodo equals
     @Override
     public boolean equals(Object obj){
@@ -101,7 +121,7 @@ public class Cliente {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 37 * hash + this.nCuenta;
+        hash = 43 * hash + this.nCuenta;
         return hash;
     }
 
@@ -122,6 +142,8 @@ public class Cliente {
         }
         return true;
     }
+
+   
     
     
 }

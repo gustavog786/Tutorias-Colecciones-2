@@ -7,7 +7,6 @@ public class Pelicula {
     private String genero;
     
     //Constructores
-
     public Pelicula() {
     }
 
@@ -17,8 +16,7 @@ public class Pelicula {
         this.genero = genero;
     }
     
-    //Getter and Setter
-
+    //Getters and Setters
     public String getNombre() {
         return nombre;
     }
