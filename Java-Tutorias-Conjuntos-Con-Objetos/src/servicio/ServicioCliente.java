@@ -33,7 +33,7 @@ public class ServicioCliente {
         boolean esta = false;
         Iterator<Cliente> itClientes = clientesBanco.iterator();
         while (itClientes.hasNext()) {
-            if (itClientes.next().getNombre().equalsIgnoreCase(clienteEliminado)) {
+            if (itClientes.next().getNombre().equalsIgnoreCase(clienteEliminado)){
                 itClientes.remove();
                 esta = true;
             }

@@ -33,28 +33,26 @@ public class Main {
         servicioPelicula.mostrarPeliculas(peliculas);
         
         //Agrego una pelicula con la misma clave
-        peliculas.put("C78", new Pelicula("Jumanji ",1995, "Accion"));
-        servicioPelicula.mostrarPeliculas(peliculas);
+//        peliculas.put("C78", new Pelicula("Jumanji ",1995, "Accion"));
+//        servicioPelicula.mostrarPeliculas(peliculas);
         
         //Eliminar pelicula con la clave
 //        peliculas.remove("B45");
 //        servicioPelicula.mostrarPeliculas(peliculas);
         
-        //otra forma de eliminar
-        
         
         //Ordenar
         //Transfomo el mapa en un arraylist
-//        ArrayList<Pelicula> listaPeliculas= new ArrayList(peliculas.values());
-//        
+        ArrayList<Pelicula> listaPeliculas= new ArrayList(peliculas.values());
+        
 //        System.out.println("Ondeno Alfabeticamente por nombre: ");
 //        servicioPelicula.ordenarPorNombre(listaPeliculas);
 //        
-//        System.out.println("Ondeno por anio: ");
-//        servicioPelicula.ordenarPorAnio(listaPeliculas);
-//        
-//        System.out.println("Ondeno Alfabeticamente por genero: ");
-//        servicioPelicula.ordenarPorGenero(listaPeliculas);
+        System.out.println("Ondeno por anio: ");
+        servicioPelicula.ordenarPorAnio(listaPeliculas);
+        
+        System.out.println("Ondeno Alfabeticamente por genero: ");
+        servicioPelicula.ordenarPorGenero(listaPeliculas);
         
         
         //map.values().removeIf(value -> !value.contains("1"));

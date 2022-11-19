@@ -18,6 +18,7 @@ public class ServicioPelicula {
             System.out.println("Clave: "+ key + "  Valor: "+ value);
         }
         System.out.println("--------\n");
+        
     }
     
     public void mostrarPeliculas(ArrayList<Pelicula> listaPeliculas){

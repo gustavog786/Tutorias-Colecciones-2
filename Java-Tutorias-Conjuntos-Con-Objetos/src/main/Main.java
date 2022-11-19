@@ -33,7 +33,7 @@ public class Main {
         servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         //agrego el mismo cliente
-//         clientesBanco.add(new Cliente("Karina Perez", 10004, 250000));
+//         clientesBanco.add(new Cliente("Karina Garcia", 10004, 250000));
 //        servicioCliente.mostrarConjuntoClientes(clientesBanco);
         
         
@@ -45,16 +45,15 @@ public class Main {
         //Ordenar clientes
         //Trasformo el Hashset en treeset
         
-//        TreeSet<Cliente> listaclienteTS = new TreeSet<>(Comparators.compareNombre);
-//        listaclienteTS.addAll(clientesBanco);       
-//        System.out.println("Lista ordenada");
-//        servicioCliente.mostrarConjuntoClientes(listaclienteTS);
+        TreeSet<Cliente> listaclienteTS = new TreeSet<>(Comparators.compareSaldo);
+        listaclienteTS.addAll(clientesBanco);       
+        System.out.println("Lista ordenada");
+        servicioCliente.mostrarConjuntoClientes(listaclienteTS);
 //
 //        
-//        listaclienteTS.add(new Cliente("Ana Lopez", 10007, 100));
-//        System.out.println("Lista ordenada");
-//        servicioCliente.mostrarConjuntoClientes(listaclienteTS);
+        listaclienteTS.add(new Cliente("Ana Lopez", 10007, 100));
+        System.out.println("Lista ordenada");
+        servicioCliente.mostrarConjuntoClientes(listaclienteTS);
 
     }
-    
 }
